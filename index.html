@@ -296,7 +296,7 @@ function dimensions(){
 function initialize(){
   dimensions();
   svg.append('title').attr('id','figure-title').text('Faculty by academic appointment');
-  svg.append('desc').attr('id','figure-description').text('44 headshots arranged in four rows: professors, associate professors, assistant professors, and professors of the practice. Teaching appointments are grouped separately within each rank. Headshots orbit and rearrange continuously, occasionally releasing decorative sparks and confetti. Use Pause motion to freeze the scene and effects. Drag a headshot to rearrange its group, or select it to read a bio.');
+  svg.append('desc').attr('id','figure-description').text(`${faculty.length} headshots arranged in four rows: professors, associate professors, assistant professors, and professors of the practice. Teaching appointments are grouped separately within each rank. Headshots orbit and rearrange continuously, occasionally releasing decorative sparks and confetti. Use Pause motion to freeze the scene and effects. Drag a headshot to rearrange its group, or select it to read a bio.`);
   const defs=svg.append('defs');
   defs.append('style').text(document.getElementById('graphik-font').textContent+'\ntext{font-family:Graphik,sans-serif;font-weight:500}.group-label{fill:#000;text-anchor:middle;letter-spacing:.65px}.row-title{fill:#000;text-anchor:middle;letter-spacing:-1px}');
   const saturation=defs.append('filter').attr('id','vivid-color').attr('x','0%').attr('y','0%').attr('width','100%').attr('height','100%').attr('color-interpolation-filters','sRGB');
